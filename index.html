@@ -1,23 +1,51 @@
-{
-  "short_name": "PowerDuo",
-  "name": "POWER DUO: Industrial Training",
-  "icons": [
-    {
-      "src": "icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "icon-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/",
-  "background_color": "#121212",
-  "display": "standalone",
-  "scope": "/",
-  "theme_color": "#FF8C00",
-  "description": "Sistema de entrenamiento industrial para el equipo Roger & Paty."
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POWER DUO</title>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estética Industrial Premium */
+        body { background-color: #121212; color: white; font-family: sans-serif; }
+        .safety-orange { color: #FF8C00; }
+        .bg-safety-orange { background-color: #FF8C00; }
+        .emerald-green { color: #34D399; }
+        .border-emerald { border-color: #34D399; }
+    </style>
+</head>
+<body>
+    <header class="relative flex justify-between items-center w-full px-6 py-6 border-b border-[#2A2A2A]">
+        <div class="flex gap-4 items-center flex-1 justify-start">
+            <button class="text-white hover:scale-110">←</button> <button class="emerald-green font-black">DUO</button> </div>
+        <h1 class="text-xl font-black safety-orange uppercase tracking-tighter px-4 text-center">Entrenamiento</h1>
+        <div class="flex gap-4 items-center flex-1 justify-end">
+            <button class="emerald-green">🌙</button> <button class="safety-orange font-black">X</button> </div>
+    </header>
+
+    <main class="p-6">
+        <div class="bg-[#F9F9F9] border-4 border-emerald-500 rounded-[2.5rem] p-8 shadow-2xl transition-all duration-500">
+            <div class="flex justify-between mb-4">
+                <h2 class="text-xl font-black safety-orange uppercase">Press de Banca</h2>
+                <span class="safety-orange font-black text-xs">TÚ</span>
+            </div>
+            
+            <div class="flex gap-8 items-baseline mb-6">
+                <div>
+                    <p class="emerald-green text-xs font-bold uppercase">Series</p>
+                    <p class="safety-orange text-4xl font-black">3</p>
+                </div>
+                <div>
+                    <p class="emerald-green text-xs font-bold uppercase">Reps</p>
+                    <p class="safety-orange text-4xl font-black">8-12</p>
+                </div>
+            </div>
+
+            <button class="w-full !bg-[#FF8C00] text-white font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all uppercase">
+                Máquina Ocupada
+            </button>
+        </div>
+    </main>
+</body>
+</html>
